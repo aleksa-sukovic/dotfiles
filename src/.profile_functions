@@ -1,0 +1,46 @@
+# Execute Bash process in provided Docker container
+dssh()
+{
+    if [[ $# -ne 1 ]]; then
+        echo "Please provide the name of Docker container"
+    fi
+
+    COMMAND="docker exec -it $(docker ps -qf "name=$1") bash"
+    
+    eval $COMMAND
+}
+
+# Own and change permission of specified folder
+own()
+{
+    if [[ $# -ne 1 ]]; then
+        echo "Provide path to folder you want to take over!"
+        return
+    fi
+
+    sudo chown -R $USER:$USER ./*
+    sudo chmod -R 755 ./*
+}
+
+# Compiling and linking flex and bison
+bflc()
+{
+    FILE_NAME=$1
+
+    # Compiling bison
+    eval "bison -d ./$FILE_NAME.y"
+
+    # Compiling flex
+    eval "flex ./$FILE_NAME.l"
+
+    # Linking
+    eval "gcc -o $FILE_NAME.out ./$FILE_NAME.tab.c ./lex.yy.c -lfl" -lm
+}
+
+flexc()
+{
+    FILE_NAME=$1
+
+    eval "flex ./$FILE_NAME.l"
+    eval "gcc -o ./$FILE_NAME.out ./lex.yy.c -lfl"
+}
