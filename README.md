@@ -1,10 +1,14 @@
 # Dotfiles
 
-These are just some of the settings that make my workflow easier.
+These are just some of the settings that make my daily work easier.
 
-I do not take credit for all of the settings found in `.profile` script.
+* Configuration found in `local` folder is the one used on my local development computer.
 
-# Instalation
+* Configuration found in `remote` folder is the one used in my Docker containers.
+
+Please note that I do not take credit for everything you find here.
+
+# Installation
 
 OS - Arch Linux + Gnome
 
