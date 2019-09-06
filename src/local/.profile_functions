@@ -1,20 +1,22 @@
-# Execute Bash process in provided Docker container
-dssh()
+#!/bin/bash
+
+# Executes bash process in provided Docker container.
+dbash()
 {
     if [[ $# -ne 1 ]]; then
         echo "Please provide the name of Docker container"
     fi
 
-    COMMAND="docker exec -it $(docker ps -qf "name=$1") bash"
-    
-    eval $COMMAND
+    docker exec -it $(docker ps -qf "name=$1") bash
 }
 
-# Own and change permission of specified folder
+# Own and change permission of specified folder.
+#   - Owner of specified file/directory is current user.
 own()
 {
     if [[ $# -ne 1 ]]; then
         echo "Provide path to folder you want to take over!"
+
         return
     fi
 
@@ -22,7 +24,8 @@ own()
     sudo chmod -R 755 ./*
 }
 
-# Compiling and linking flex and bison
+# Compiles and links flex and bison programs from specified file
+#   - Filename extension of ".y" is assumed.
 bflc()
 {
     FILE_NAME=$1
@@ -37,10 +40,22 @@ bflc()
     eval "gcc -o $FILE_NAME.out ./$FILE_NAME.tab.c ./lex.yy.c -lfl" -lm
 }
 
+# Compiles specified flex file
+#   - Filename extension of ".l" is assummed.
 flexc()
 {
     FILE_NAME=$1
 
     eval "flex ./$FILE_NAME.l"
     eval "gcc -o ./$FILE_NAME.out ./lex.yy.c -lfl"
+}
+
+# Basic system clean-up
+#   - Uses pacman-contrib package to clean unused packages.
+#   - Cleans cache.
+clean()
+{
+    sudo pacman -R $(pacman -Qtdq)
+
+    rm -rf ~/.cache/*
 }

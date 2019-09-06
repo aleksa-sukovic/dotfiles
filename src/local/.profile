@@ -2,7 +2,7 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export EDITOR=/usr/bin/nano
 
 # Path Edit
-export PATH=$PATH:/home/aleksa/.config/composer/vendor/bin
+export PATH=$PATH
 
 # Colors
 my_hostname=aleksa-dtc.local
