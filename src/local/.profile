@@ -1,5 +1,5 @@
 export QT_QPA_PLATFORMTHEME="qt5ct"
-export EDITOR=/usr/bin/nano
+export EDITOR=/usr/bin/vim
 
 # Path Edit
 export PATH=$PATH
@@ -24,7 +24,6 @@ else
 fi
 
 # Editors
-alias subl="subl3"
 alias code="GTK_IM_MODULE=ibus code"
 
 # Navigation

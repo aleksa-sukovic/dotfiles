@@ -50,12 +50,30 @@ flexc()
     eval "gcc -o ./$FILE_NAME.out ./lex.yy.c -lfl"
 }
 
-# Basic system clean-up
-#   - Uses pacman-contrib package to clean unused packages.
-#   - Cleans cache.
-clean()
+v73()
 {
-    sudo pacman -R $(pacman -Qtdq)
+	cd ~/Development/Source/fleka/Vagrant/php73/
 
-    rm -rf ~/.cache/*
+	if [ "$#" -gt 0 ]; then
+		eval "vagrant $1"
+	fi
 }
+
+v72()
+{
+	cd ~/Development/Source/fleka/Vagrant/php72/
+
+	if [ "$#" -gt 0 ]; then
+		eval "vagrant $1"
+	fi
+}
+
+v56()
+{
+	cd ~/Development/Source/fleka/Vagrant/php56/
+
+	if [ "$#" -gt 0 ]; then
+		eval "vagrant $1"
+	fi
+}
+
