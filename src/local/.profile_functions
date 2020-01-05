@@ -55,7 +55,7 @@ v73()
 	cd ~/Development/Source/fleka/Vagrant/php73/
 
 	if [ "$#" -gt 0 ]; then
-		eval "vagrant $1"
+		eval "vagrant $@"
 	fi
 }
 
@@ -64,7 +64,7 @@ v72()
 	cd ~/Development/Source/fleka/Vagrant/php72/
 
 	if [ "$#" -gt 0 ]; then
-		eval "vagrant $1"
+		eval "vagrant $@"
 	fi
 }
 
@@ -73,7 +73,24 @@ v56()
 	cd ~/Development/Source/fleka/Vagrant/php56/
 
 	if [ "$#" -gt 0 ]; then
-		eval "vagrant $1"
+		eval "vagrant $@"
 	fi
 }
 
+dev()
+{
+    cd ~/Development/Source/
+
+	if [ "$#" -gt 0 ]; then
+		eval "$@"
+	fi
+}
+
+devf()
+{
+    cd ~/Development/Source/fleka/
+
+	if [ "$#" -gt 0 ]; then
+		eval "$@"
+	fi
+}
