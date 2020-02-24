@@ -20,8 +20,8 @@ own()
         return
     fi
 
-    sudo chown -R $USER:$USER ./*
-    sudo chmod -R 755 ./*
+    sudo chown -R $USER:$USER $1
+    sudo chmod -R 755 $1
 }
 
 # Compiles and links flex and bison programs from specified file
