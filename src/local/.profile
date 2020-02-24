@@ -5,8 +5,6 @@ export EDITOR=/usr/bin/vim
 export PATH=$PATH
 
 # Colors
-my_hostname=aleksa-dtc.local
-
 BROWN="\033[0;33m"
 MAGENTA="\033[1;31m"
 ORANGE="\033[1;33m"
@@ -16,15 +14,6 @@ WHITE="\033[1;37m"
 BOLD=""
 RESET="\033[m"
 BLUE="\e[1;34m"
-
-if [ "$(hostname)" == "$my_hostname" ] ; then
-	export PS1="\[$BLUE\]> \w\n\[$RESET\]\$ "
-else
-	export PS1="\[$BLUE\]\u@\h > \w\n\[$RESET\]\$ "
-fi
-
-# Editors
-alias code="GTK_IM_MODULE=ibus code"
 
 # Navigation
 alias ..="cd .."
@@ -55,9 +44,6 @@ alias vssh="vagrant ssh"
 # Docker
 alias dcont="docker container"
 alias dcomp="docker-compose"
-
-# Utilities
-alias allow="sudo chmod -R 755"
 
 # Laravel framework
 alias art='php artisan'
