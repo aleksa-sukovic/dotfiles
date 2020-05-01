@@ -88,7 +88,7 @@ dev()
 
 devf()
 {
-    cd ~/Development/Source/fleka/
+    cd ~/Development/Source/fleka/www/
 
 	if [ "$#" -gt 0 ]; then
 		eval "$@"
