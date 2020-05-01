@@ -2,6 +2,10 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export EDITOR=/usr/bin/vim
 
 # Path Edit
+export PATH="$PATH:/home/aleksa/Development/Source/android/sdk"
+export PATH="$PATH:/home/aleksa/Development/Source/android/sdk/tools"
+export PATH="$PATH:/home/aleksa/Development/Source/android/sdk/platform-tools"
+export PATH="$PATH:/home/aleksa/Development/Source/flutter/bin"
 export PATH=$PATH
 
 # Colors
