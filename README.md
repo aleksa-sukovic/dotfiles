@@ -12,7 +12,7 @@ Please note that I do not take credit for everything you find here.
 
 OS - Arch Linux + Gnome
 
-* Copy `.profile` and `.profile_functions` to your home directory
+* Copy `.profile`, `.profile_functions` and `.vimrc` to your home directory
 * Edit `.profile` and change `{username}` with your actual username
 
 * Edit `.bashrc` file and append the following:
