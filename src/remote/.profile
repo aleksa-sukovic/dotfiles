@@ -1,5 +1,5 @@
 export QT_QPA_PLATFORMTHEME="qt5ct"
-export EDITOR=/usr/bin/nano
+export EDITOR=/usr/bin/vim
 
 # Colors
 BROWN="\033[0;33m"
@@ -38,11 +38,3 @@ alias fs="du -sh"
 
 # Laravel framework
 alias art='php artisan'
-
-# Functions
-phput()
-{
-	COMMAND="./vendor/bin/phpunit --filter $1"
-
-	eval $COMMAND
-}
