@@ -31,6 +31,7 @@ alias sudo="sudo "
 # Files
 alias hosts='sudo $EDITOR /etc/hosts'
 alias please='sudo "$BASH" -c "$(history -p !!)"'
+alias cls='clear'
 
 # ls command
 alias l="ls -l"
