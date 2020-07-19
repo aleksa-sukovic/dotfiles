@@ -4,7 +4,7 @@
 dbash()
 {
     if [[ $# -ne 1 ]]; then
-        echo "Please provide the name of Docker container"
+        echo "Please provide the name of the Docker container."
     fi
 
     docker exec -it $(docker ps -qf "name=$1") bash
@@ -15,66 +15,13 @@ dbash()
 own()
 {
     if [[ $# -ne 1 ]]; then
-        echo "Provide path to folder you want to take over!"
+        echo "Provide path to folder you want to take over."
 
         return
     fi
 
     sudo chown -R $USER:$USER $1
     sudo chmod -R 755 $1
-}
-
-# Compiles and links flex and bison programs from specified file
-#   - Filename extension of ".y" is assumed.
-bflc()
-{
-    FILE_NAME=$1
-
-    # Compiling bison
-    eval "bison -d ./$FILE_NAME.y"
-
-    # Compiling flex
-    eval "flex ./$FILE_NAME.l"
-
-    # Linking
-    eval "gcc -o $FILE_NAME.out ./$FILE_NAME.tab.c ./lex.yy.c -lfl" -lm
-}
-
-# Compiles specified flex file
-#   - Filename extension of ".l" is assummed.
-flexc()
-{
-    FILE_NAME=$1
-
-    eval "flex ./$FILE_NAME.l"
-    eval "gcc -o ./$FILE_NAME.out ./lex.yy.c -lfl"
-}
-
-v73()
-{
-	cd ~/Development/Source/fleka/Vagrant/php73/
-
-	if [ "$#" -gt 0 ]; then
-		eval "vagrant $@"
-	fi
-}
-
-v72()
-{
-	cd ~/Development/Source/fleka/Vagrant/php72/
-
-	if [ "$#" -gt 0 ]; then
-		eval "vagrant $@"
-	fi
-}
-
-v56()
-{
-	cd ~/Development/Source/fleka/Vagrant/php56/
-
-	if [ "$#" -gt 0 ]; then
-		eval "vagrant $@"
-	fi
 }
 
 dev()
@@ -86,11 +33,3 @@ dev()
 	fi
 }
 
-devf()
-{
-    cd ~/Development/Source/fleka/www/
-
-	if [ "$#" -gt 0 ]; then
-		eval "$@"
-	fi
-}
