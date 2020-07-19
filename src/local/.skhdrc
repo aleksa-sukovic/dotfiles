@@ -1,0 +1,27 @@
+# Focus
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# Swap
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+
+# Spaces
+shift + alt - 1 : yabai -m window --space 1
+shift + alt - 2 : yabai -m window --space 2
+shift + alt - 3 : yabai -m window --space 3
+shift + alt - 4 : yabai -m window --space 4
+shift + alt - 5 : yabai -m window --space 5
+shift + alt - 6 : yabai -m window --space 6
+
+# Floating
+shift + ctrl - d : yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2
+shift + ctrl - k : yabai -m window --grid 1:1:0:0:1:1
+shift + ctrl - h : yabai -m window --grid 1:2:0:0:1:1
+shift + ctrl - l : yabai -m window --grid 1:2:1:0:1:1
+shift + ctrl - j : yabai -m window --grid 4:4:1:1:2:2
+
