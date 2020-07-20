@@ -18,6 +18,9 @@ shift + alt - 4 : yabai -m window --space 4
 shift + alt - 5 : yabai -m window --space 5
 shift + alt - 6 : yabai -m window --space 6
 
+# Window
+shift + alt - m : yabai -m window --minimize
+
 # Floating
 shift + ctrl - d : yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2
 shift + ctrl - f : yabai -m window --toggle float; yabai -m window --grid 1:1:0:0:1:1
