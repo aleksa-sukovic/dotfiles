@@ -10,22 +10,38 @@ shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 
-# Spaces
+# Window Management
 shift + alt - 1 : yabai -m window --space 1
 shift + alt - 2 : yabai -m window --space 2
 shift + alt - 3 : yabai -m window --space 3
 shift + alt - 4 : yabai -m window --space 4
 shift + alt - 5 : yabai -m window --space 5
 shift + alt - 6 : yabai -m window --space 6
-
-# Window
 shift + alt - m : yabai -m window --minimize
+shift + alt - n : yabai -m space --create && yabai -m window --space last && yabai -m space --focus last
+shift + alt - f : yabai -m window --resize right:20:0
+shift + alt - a : yabai -m window --resize right:-20:0
+shift + alt - s : yabai -m window --resize bottom:0:20
+shift + alt - d : yabai -m window --resize bottom:0:-20
+
+# Spaces CRUD
+shift + ctrl - 1 : yabai -m space --focus 1
+shift + ctrl - 2 : yabai -m space --focus 2
+shift + ctrl - 3 : yabai -m space --focus 3
+shift + ctrl - 4 : yabai -m space --focus 4
+shift + ctrl - 5 : yabai -m space --focus 5
+shift + ctrl - 6 : yabai -m space --focus 6
+shift + ctrl - c : yabai -m space --create
+shift + ctrl - x : yabai -m space --destroy
+shift + ctrl - l : yabai -m space --focus next || yabai -m space --focus first
+shift + ctrl - h : yabai -m space --focus prev || yabai -m space --focus last
+shift + ctrl - e : yabai -m space --focus recent
 
 # Floating
-shift + ctrl - d : yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2
-shift + ctrl - f : yabai -m window --toggle float; yabai -m window --grid 1:1:0:0:1:1
-shift + ctrl - k : yabai -m window --grid 1:1:0:0:1:1
-shift + ctrl - h : yabai -m window --grid 1:2:0:0:1:1
-shift + ctrl - l : yabai -m window --grid 1:2:1:0:1:1
-shift + ctrl - j : yabai -m window --grid 4:4:1:1:2:2
+alt + ctrl - d : yabai -m window --toggle float; yabai -m window --grid 4:4:0:0:3:3
+alt + ctrl - f : yabai -m window --toggle float; yabai -m window --grid 1:1:0:0:1:1
+alt + ctrl - k : yabai -m window --grid 1:1:0:0:1:1
+alt + ctrl - h : yabai -m window --grid 1:2:0:0:1:1
+alt + ctrl - l : yabai -m window --grid 1:2:1:0:1:1
+alt + ctrl - j : yabai -m window --grid 4:4:1:1:2:2
 

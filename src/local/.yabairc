@@ -21,3 +21,8 @@ yabai -m config bottom_padding               9
 yabai -m config left_padding                 9
 yabai -m config right_padding                9
 yabai -m config window_gap                   9
+
+# Automation
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Viber$" manage=off
+yabai -m rule --add app="^WhatsApp$" manage=off
