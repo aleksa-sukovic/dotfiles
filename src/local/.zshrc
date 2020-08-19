@@ -14,12 +14,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(
 )
 
 # Plugins
-plugins=(
-    git
-    docker
-    docker-compose
-	zsh-autosuggestions
-)
+plugins=(zsh-autosuggestions)
 
 # Configuration
 source $ZSH/oh-my-zsh.sh
