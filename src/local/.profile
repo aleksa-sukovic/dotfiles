@@ -2,10 +2,6 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export EDITOR=/usr/bin/vim
 
 # Path Edit
-export PATH="$PATH:/home/aleksa/Development/Source/android/sdk"
-export PATH="$PATH:/home/aleksa/Development/Source/android/sdk/tools"
-export PATH="$PATH:/home/aleksa/Development/Source/android/sdk/platform-tools"
-export PATH="$PATH:/home/aleksa/Development/Source/flutter/bin"
 export PATH=$PATH
 
 # Colors
@@ -21,7 +17,6 @@ BLUE="\e[1;34m"
 
 # Navigation
 alias ..="cd .."
-alias cd..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
@@ -53,8 +48,6 @@ alias dcomp="docker-compose"
 # Laravel framework
 alias art='php artisan'
 
-# Preserving path in new terminal window
-[[ -f /etc/profile.d/vte.sh ]] && . /etc/profile.d/vte.sh
-
-# Functions
-. "/home/{username}/.profile_functions"
+# Additional
+. "/Users/aleksa/.profile_functions"
+. "/Users/aleksa/.nvm-init"
