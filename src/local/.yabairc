@@ -26,3 +26,6 @@ yabai -m config window_gap                   9
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Viber$" manage=off
 yabai -m rule --add app="^WhatsApp$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^Todoist$" manage=off
+yabai -m rule --add app=".*" manage=off
