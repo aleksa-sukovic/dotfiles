@@ -12,11 +12,8 @@ BOLD=""
 RESET="\033[m"
 BLUE="\e[1;34m"
 
-export PS1="\[$ORANGE\]\u@\h > \w\n\[$RESET\]\$ "
-
 # Navigation
 alias ..="cd .."
-alias cd..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
@@ -26,15 +23,24 @@ alias sudo="sudo "
 # Files
 alias hosts='sudo $EDITOR /etc/hosts'
 alias please='sudo "$BASH" -c "$(history -p !!)"'
+alias cls='clear'
 
 # ls command
 alias l="ls -l"
 alias la="ls -la"
 alias lsd='ls -l | grep "^d"'
 
-# Utilities
-alias allow="sudo chmod -R 755"
+# File size
 alias fs="du -sh"
+
+# Vagrant
+alias vup="vagrant up"
+alias vhalt="vagrant halt"
+alias vssh="vagrant ssh"
+
+# Docker
+alias dcont="docker container"
+alias dcomp="docker-compose"
 
 # Laravel framework
 alias art='php artisan'
