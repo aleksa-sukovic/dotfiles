@@ -33,3 +33,14 @@ dev()
 	fi
 }
 
+localIP()
+{
+	myIP="$(ipconfig getifaddr en0)"
+	echo "Local IP: $myIP"
+}
+
+publicIP()
+{
+	myIP="$(dig +short myip.opendns.com @resolver1.opendns.com)"
+	echo "Public IP: $myIP"
+}
