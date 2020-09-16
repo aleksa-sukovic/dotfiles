@@ -50,5 +50,5 @@ alias dcomp="docker-compose"
 alias art='php artisan'
 
 # Additional.
-. "~/.profile_functions"
-. "~/.nvm-init"
+. "$HOME/.profile_functions"
+. "$HOME/.nvm-init"
