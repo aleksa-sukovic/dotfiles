@@ -1,20 +1,19 @@
-# Enable Powerlevel10k instant prompt.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Path to oh-my-zsh installation.
 export ZSH="/Users/aleksa/.oh-my-zsh"
 
 # Customization
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="robbyrussell"
 HIST_STAMPS="mm.dd.yyyy"
 ZSH_AUTOSUGGEST_STRATEGY=(
     completion
 )
 
 # Plugins
-plugins=(zsh-autosuggestions)
+plugins=(
+	git 
+	autojump
+	zsh-autosuggestions
+)
 
 # Configuration
 source $ZSH/oh-my-zsh.sh
