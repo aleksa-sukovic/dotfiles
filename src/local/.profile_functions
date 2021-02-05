@@ -33,6 +33,15 @@ dev()
 	fi
 }
 
+home()
+{
+    cd ~
+
+    if [ "$#" -gt 0 ]; then
+        eval "$@"
+    fi
+}
+
 localIP()
 {
 	myIP="$(ipconfig getifaddr en0)"
