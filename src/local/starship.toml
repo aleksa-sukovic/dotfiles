@@ -17,3 +17,7 @@ show_percentage = true
 show_swap = false
 threshold = 75
 symbol = "☰ "
+
+[directory]
+disabled = false
+truncate_to_repo = true
