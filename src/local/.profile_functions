@@ -42,14 +42,19 @@ home()
     fi
 }
 
-localIP()
+ip_local()
 {
 	myIP="$(ipconfig getifaddr en0)"
 	echo "Local IP: $myIP"
 }
 
-publicIP()
+ip_public()
 {
 	myIP="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 	echo "Public IP: $myIP"
+}
+
+vpn_enable()
+{
+    sudo sysctl net.netfilter.nf_conntrack_helper=1
 }
