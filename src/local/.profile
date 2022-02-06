@@ -15,7 +15,7 @@ BOLD=""
 RESET="\033[m"
 BLUE="\e[1;34m"
 
-# Navigation.
+# Navigation & Keybindings.
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -51,4 +51,3 @@ alias art='php artisan'
 
 # Additional.
 . "$HOME/.profile_functions"
-. "$HOME/.nvm-init"

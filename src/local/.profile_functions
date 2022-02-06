@@ -58,3 +58,11 @@ vpn_enable()
 {
     sudo sysctl net.netfilter.nf_conntrack_helper=1
 }
+
+wacom_configure()
+{
+    xsetwacom --set "Wacom One by Wacom S Pen stylus" Button 2 "pan"
+    xsetwacom --set "Wacom One by Wacom S Pen stylus" "PanScrollThreshold" 200
+    xsetwacom --set "Wacom One by Wacom S Pen stylus" Button 3 "key ctrl z"
+    xmodmap ~/.Xmodmap
+}
