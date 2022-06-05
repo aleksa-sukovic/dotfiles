@@ -27,6 +27,7 @@ alias sudo="sudo "
 alias hosts='sudo $EDITOR /etc/hosts'
 alias please='sudo "$BASH" -c "$(history -p !!)"'
 alias cls='clear'
+alias tedit='flatpak run org.gnome.TextEditor'
 
 # Commands.
 alias l="ls -l"
