@@ -46,8 +46,5 @@ alias vssh="vagrant ssh"
 alias dcont="docker container"
 alias dcomp="docker-compose"
 
-# Laravel framework.
-alias art='php artisan'
-
 # Additional.
 . "$HOME/.profile_functions"
