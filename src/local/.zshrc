@@ -16,6 +16,11 @@ plugins=(git safe-paste vi-mode)
 source $ZSH/oh-my-zsh.sh
 source ~/.profile
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# 5. Conda Initialization.
 [[ ! -f ~/Development/Source/dotfiles/src/local/.p10k.zsh ]] || source ~/Development/Source/dotfiles/src/local/.p10k.zsh
+
+# 5. PyEnv Initialization
+export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
