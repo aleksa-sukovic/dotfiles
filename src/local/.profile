@@ -45,7 +45,7 @@ alias vssh="vagrant ssh"
 
 # Docker.
 alias dcont="docker container"
-alias dcomp="docker-compose"
+alias dcomp="docker compose"
 
 # Additional.
 . "$HOME/.profile_functions"
