@@ -1,26 +1,11 @@
-# 1. Enable Powerlevel10k instant prompt. It should stay close to the top of.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# 2. General Setup.
+# === General Setup ===
 export ZSH="$HOME/.oh-my-zsh"
 
-# 3. ZSH Config.
-# DISABLE_MAGIC_FUNCTIONS="true"
-ZSH_THEME="powerlevel10k/powerlevel10k"
-HIST_STAMPS="mm.dd.yyyy"
+# === ZSH ===
+ZSH_THEME="jispwoso"
+HIST_STAMPS="dd.mm.yyyy"
+
 plugins=(git safe-paste vi-mode)
 
-# 4. Additional Scripts.
 source $ZSH/oh-my-zsh.sh
 source ~/.profile
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-[[ ! -f ~/Development/Source/dotfiles/src/local/.p10k.zsh ]] || source ~/Development/Source/dotfiles/src/local/.p10k.zsh
-
-# 5. PyEnv Initialization
-export PYENV_ROOT="$HOME/.pyenv"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"

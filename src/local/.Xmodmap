@@ -1,4 +1,0 @@
-! Maps 'Left Control' to 'Left Shift'
-keycode 62 = Control_L
-add ctrl = Control_L
-remove shift = Control_L

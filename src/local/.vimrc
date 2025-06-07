@@ -17,6 +17,5 @@ set laststatus=2   "show status line
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 set wildmenu       " Display command line's tab complete options as a menu.
 
-colorscheme onedark 
 highlight Normal ctermbg=None
 highlight LineNr ctermfg=DarkGrey

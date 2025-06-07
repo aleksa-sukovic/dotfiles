@@ -1,33 +1,8 @@
 #!/bin/bash
 
-# Executes bash process in provided Docker container.
-dbash()
-{
-    if [[ $# -ne 1 ]]; then
-        echo "Please provide the name of the Docker container."
-    fi
-
-    docker exec -it $(docker ps -qf "name=$1") bash
-}
-
-# Own and change permission of specified folder.
-#   - Owner of specified file/directory is current user.
-own()
-{
-    if [[ $# -ne 1 ]]; then
-        echo "Provide path to folder you want to take over."
-
-        return
-    fi
-
-    sudo chown -R $USER:$USER $1
-    sudo chmod -R 755 $1
-}
-
 dev()
 {
-    cd ~/Development/Source/
-
+    cd /work/source/
 	if [ "$#" -gt 0 ]; then
 		eval "$@"
 	fi
@@ -54,15 +29,17 @@ ip_public()
 	echo "Public IP: $myIP"
 }
 
-vpn_enable()
+ssh_lws()
 {
-    sudo sysctl net.netfilter.nf_conntrack_helper=1
+	ssh asukovic@192.168.88.3
 }
 
-wacom_configure()
+wake_lws-local()
 {
-    xsetwacom --set "Wacom One by Wacom S Pen stylus" Button 2 "pan"
-    xsetwacom --set "Wacom One by Wacom S Pen stylus" "PanScrollThreshold" 200
-    xsetwacom --set "Wacom One by Wacom S Pen stylus" Button 3 "key ctrl z"
-    xmodmap ~/.Xmodmap
+	wakeonlan 04:42:1a:97:2d:fa
+}
+
+wake_lws()
+{
+	  ssh wol@192.168.77.1 '/tool wol interface=bridge-lan mac=04:42:1a:97:2d:fa'
 }
