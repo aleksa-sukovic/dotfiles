@@ -29,17 +29,22 @@ ip_public()
 	echo "Public IP: $myIP"
 }
 
-ssh_lws()
+lws-ssh()
 {
 	ssh asukovic@192.168.88.3
 }
 
-wake_lws-local()
+lws-wake-local()
 {
 	wakeonlan 04:42:1a:97:2d:fa
 }
 
-wake_lws()
+lws-wake()
 {
 	  ssh wol@192.168.77.1 '/tool wol interface=bridge-lan mac=04:42:1a:97:2d:fa'
+}
+
+lws-reboot-windows()
+{
+	sudo grub2-reboot "Windows Boot Manager (on /dev/nvme0n1p4)" && sudo reboot
 }
